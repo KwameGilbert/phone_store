@@ -7,6 +7,7 @@ function changeSlide(n) {
     slides[currentSlide].classList.add('active');
 }
 
+
 // Fetch data from the database and display it
 document.addEventListener('DOMContentLoaded', () => {
     fetch('fetch_phones.php')
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             });
 
+            
             data.onSale.forEach(phone => {
                 onSalePhones.innerHTML += `
                     <div class="product">
