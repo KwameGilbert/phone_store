@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "pos_database";
+$dbname = "phone_store";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

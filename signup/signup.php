@@ -1,3 +1,10 @@
+<?php
+
+$error = $_GET['error'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +13,7 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
 </head>
+
 <body>
     <div class="container">
         <div class="signup-card">
@@ -30,7 +38,9 @@
                 <button type="submit" class="btn-submit">Sign Up</button>
                 <p class="message" id="message"></p>
             </form>
-
+            <center>
+                <?php echo $error; ?>
+            </center>
             <p class="message">Already have an account? <a href="../login/login.html">Log In</a></p>
         </div>
     </div>

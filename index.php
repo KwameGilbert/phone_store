@@ -92,6 +92,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </section>
 
+    
     <section class="contact">
         <h2>Contact Us</h2>
         <form action="contact.php" method="post">

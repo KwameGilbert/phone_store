@@ -8,11 +8,6 @@ $pass = $_POST['password'];
 
 $error = '';
 
-// Hash the password
-$hashed_password = password_hash($pass, PASSWORD_BCRYPT);
-
-
-
 try {
     // Prepare and execute SQL statement
     $stmt = $conn->prepare("SELECT id, username, password_hash FROM users WHERE username = ?");
@@ -22,9 +17,10 @@ try {
     $stmt->bind_result($id, $username, $password_hash);
     $stmt->fetch();
 
+
     if ($stmt->num_rows == 1) {
         // Verify password
-        if (password_verify($hashed_password, $password_hash)) {
+        if (password_verify($pass, $password_hash)) {
             // Set session variables
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
@@ -39,6 +35,7 @@ try {
         $error = "Invalid username.";
     }
 
+
     $stmt->close();
     $conn->close();
 } catch (Exception $e) {
@@ -48,6 +45,7 @@ try {
 
 // Redirect to error page if there was an error
 if (!empty($error)) {
+    echo "<script> console.log({$error}) </script>";
     header("Location: login_error.php?error=" . urlencode($error));
     exit();
 }

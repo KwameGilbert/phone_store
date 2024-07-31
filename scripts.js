@@ -1,15 +1,17 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-item');
-
-function changeSlide(n) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + n + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-}
 
 
 // Fetch data from the database and display it
 document.addEventListener('DOMContentLoaded', () => {
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    
+    function changeSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
     fetch('fetch_phones.php')
         .then(response => response.json())
         .then(data => {
