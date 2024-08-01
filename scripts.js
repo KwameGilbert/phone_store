@@ -1,16 +1,17 @@
-
-
-// Fetch data from the database and display it
 document.addEventListener('DOMContentLoaded', () => {
-
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-item');
-    
+
     function changeSlide(n) {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + n + slides.length) % slides.length;
         slides[currentSlide].classList.add('active');
     }
+
+    // Automatically change slides every 2 seconds
+    setInterval(() => {
+        changeSlide(1);
+    }, 2000);
 
     fetch('fetch_phones.php')
         .then(response => response.json())
@@ -30,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             });
 
-            
             data.onSale.forEach(phone => {
                 onSalePhones.innerHTML += `
                     <div class="product">
