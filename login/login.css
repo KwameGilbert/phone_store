@@ -82,7 +82,7 @@ body {
 .btn-submit {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #099c22;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -92,7 +92,7 @@ body {
 }
 
 .btn-submit:hover {
-    background-color: #0056b3;
+    background-color: #05da28;
 }
 
 /* Error message styling */

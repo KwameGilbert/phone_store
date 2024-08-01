@@ -31,7 +31,7 @@ if (!isset($_SESSION['user_id'])) {
                     <li><a href="#on-sale">On-Sale</a></li>
                     <li><a href="#featured">Featured</a></li>
                     <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="./logout.php">Logout</a></li>
+                    <li><a id="logout" href="./logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -53,24 +53,21 @@ if (!isset($_SESSION['user_id'])) {
     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
     <a class="next" onclick="changeSlide(1)">&#10095;</a>
 </div>
-
-
-
     <section id="why-choose-us" class="why-choose-us">
     <h2>Why Choose Us</h2>
     <div class="why-choose-us-container">
         <div class="why-choose-us-item">
-            <i class="fas fa-shipping-fast"></i>
+            <i class="fa fa-shipping-fast"></i>
             <h3>Fast Delivery</h3>
             <p>Get your products delivered to you in no time.</p>
         </div>
         <div class="why-choose-us-item">
-            <i class="fas fa-certificate"></i>
+            <i class="fa fa-certificate"></i>
             <h3>Original Products</h3>
             <p>We guarantee 100% original and quality products.</p>
         </div>
         <div class="why-choose-us-item">
-            <i class="fas fa-tags"></i>
+            <i class="fa fa-tags"></i>
             <h3>Great Discounts</h3>
             <p>Enjoy amazing discounts on your favorite items.</p>
         </div>
