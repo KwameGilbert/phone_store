@@ -8,14 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     }
 
-
-
-    // Automatically change slides every 2 seconds
+    
     setInterval(() => {
         changeSlide(1);
     }, 2000);
 
-    
+    // Fetch data from the database and display it
     fetch('fetch_phones.php')
         .then(response => response.json())
         .then(data => {

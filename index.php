@@ -35,21 +35,46 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </header>
 
+
     <div id="home" class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/banner1.jpg" alt="Banner 1">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner2.jpg" alt="Banner 2">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner3.jpg" alt="Banner 3">
-            </div>
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img src="images/banner1.jpg" alt="Banner 1">
         </div>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <div class="carousel-item active">
+            <img src="images/banner2.jpg" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+            <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
     </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+
+
+    <section id="why-choose-us" class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="why-choose-us-container">
+        <div class="why-choose-us-item">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Get your products delivered to you in no time.</p>
+        </div>
+        <div class="why-choose-us-item">
+            <i class="fas fa-certificate"></i>
+            <h3>Original Products</h3>
+            <p>We guarantee 100% original and quality products.</p>
+        </div>
+        <div class="why-choose-us-item">
+            <i class="fas fa-tags"></i>
+            <h3>Great Discounts</h3>
+            <p>Enjoy amazing discounts on your favorite items.</p>
+        </div>
+    </div>
+</section>
+
 
     <section id="featured" class="featured">
         <h2>Featured Phones</h2>

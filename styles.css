@@ -92,6 +92,55 @@ nav ul li a {
     right: 0;
 }
 
+.why-choose-us {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.why-choose-us-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.why-choose-us-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.why-choose-us-item i {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.why-choose-us-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.why-choose-us-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+
 section {
     padding: 40px 0;
     margin-top: 60px; /* Adjusted margin to account for fixed header */
