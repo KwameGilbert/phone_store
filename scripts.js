@@ -1,3 +1,4 @@
+// Fetch data from the database and display it
 document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-item');
@@ -8,12 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     }
 
-    
+    // Auto slide change every 2 seconds
     setInterval(() => {
         changeSlide(1);
     }, 2000);
 
-    // Fetch data from the database and display it
     fetch('fetch_phones.php')
         .then(response => response.json())
         .then(data => {
@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
             data.featured.forEach(phone => {
                 featuredPhones.innerHTML += `
                     <div class="product">
-                        <img src="images/${phone.image}" alt="${phone.name}">
-                        <h3>${phone.name}</h3>
-                        <p>$${phone.price}</p>
-                        <p>${phone.details}</p>
+                        <a href="product.php?id=${phone.id}">
+                            <img src="images/${phone.image}" alt="${phone.name}">
+                            <h3>${phone.name}</h3>
+                            <p>$${phone.price}</p>
+                            <p>${phone.details}</p>
+                        </a>
                     </div>
                 `;
             });
@@ -35,10 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
             data.onSale.forEach(phone => {
                 onSalePhones.innerHTML += `
                     <div class="product">
-                        <img src="images/${phone.image}" alt="${phone.name}">
-                        <h3>${phone.name}</h3>
-                        <p>$${phone.price}</p>
-                        <p>${phone.details}</p>
+                        <a href="product.php?id=${phone.id}">
+                            <img src="images/${phone.image}" alt="${phone.name}">
+                            <h3>${phone.name}</h3>
+                            <p>$${phone.price}</p>
+                            <p>${phone.details}</p>
+                        </a>
                     </div>
                 `;
             });
@@ -46,10 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
             data.accessories.forEach(accessory => {
                 accessories.innerHTML += `
                     <div class="product">
-                        <img src="images/${accessory.image}" alt="${accessory.name}">
-                        <h3>${accessory.name}</h3>
-                        <p>$${accessory.price}</p>
-                        <p>${accessory.details}</p>
+                        <a href="product.php?id=${accessory.id}">
+                            <img src="images/${accessory.image}" alt="${accessory.name}">
+                            <h3>${accessory.name}</h3>
+                            <p>$${accessory.price}</p>
+                            <p>${accessory.details}</p>
+                        </a>
                     </div>
                 `;
             });
